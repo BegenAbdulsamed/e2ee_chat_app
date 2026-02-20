@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Chat</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="me">Ben: <b id="me"></b></div>
+      <button id="logout" class="ghost">Çıkış</button>
+
+      <h3>Kullanıcılar</h3>
+      <div id="users" class="users"></div>
+    </aside>
+
+    <main class="chat">
+      <div id="chatHeader" class="chatHeader muted">Bir kullanıcı seç</div>
+      <div id="messages" class="messages"></div>
+
+      <form id="msgForm" class="form">
+        <input id="msgInput" placeholder="Mesaj yaz..." maxlength="2000" autocomplete="off"/>
+        <button type="submit">Gönder</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

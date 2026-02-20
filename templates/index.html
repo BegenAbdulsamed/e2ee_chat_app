@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Giriş</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>Giriş</h2>
+    <p class="muted">Kullanıcı adını gir, chat’e geç.</p>
+
+    <form id="loginForm">
+      <input id="username" placeholder="örn: samet" maxlength="30" required />
+      <button type="submit">Chat'e gir</button>
+    </form>
+  </div>
+
+<script>
+  const form = document.getElementById("loginForm");
+  const input = document.getElementById("username");
+
+  const saved = localStorage.getItem("username");
+  if (saved) input.value = saved;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const u = input.value.trim();
+    if (!u) return;
+
+    localStorage.setItem("username", u);
+    window.location.href = "/chat";
+  });
+</script>
+</body>
+</html>
