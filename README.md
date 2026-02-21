@@ -1,0 +1,1 @@
+Readme dosyasını düzenler misin
