@@ -1,4 +1,4 @@
-Aşağıdakini **direkt README.md** içine kopyalayıp yapıştırabilirsin. Düzenli, akış sıralı ve karışıklık yok.
+
 
 ````md
 # E2EE Chat (FastAPI + Socket.IO + WebCrypto)
